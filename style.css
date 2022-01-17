@@ -1,16 +1,94 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+/* .container{
     background-color: brown;
     height: 100vh;
+} */
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    background: linear-gradient(45deg, grey, orange);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1{
+    background-image: url(img/praha.jpg);
+}
+.img2{
+    background-image: url(img/praha11.webp);
+}
+.img3{
+    background-image: url(img/praha12.jpg);
+}
+.img4{
+    background-image: url(img/praha3.webp);
+}
+.img5{
+    background-image: url(img/praha10.webp);
+}
+
+.container{
+    display: flex;
+    width: 95vw;
+}
+
+.slide{
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2% 2%;
+    color: white;
+    cursor: pointer;
+    margin: 0.5%;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.3s ease-in;
+}
+
+/* .slide h2 dáme position absolute a aby se pak zarovnával k nadřazenému elementu což je .slide tak musíme dát .slide position relative !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.slide h2{
+    font-size: 100%;
+    margin: 1%;
+    font-family: cursive;
+    font-weight: bold;
+    position: absolute;
+    bottom: 1%;
+    color: snow;
+    opacity: 0;
+    
+
+}
+
+.slide.active{
+    flex: 5;
+}
+
+.slide.active h2{
+    opacity: 1;
+    transition: opacity 1s ease-in;
 }
 
 
+/* @media(max-width:650px){
+    .container{
+        width: 100vw;
+    }
+    .slide:nth-of-type(3), .slide:nth-of-type(4), .slide:nth-of-type(5){
+        display: none;
 
+    }
+} */
 
 
 
